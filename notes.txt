@@ -1,0 +1,24 @@
+
+Configure the Project:
+- Initial configuration: meson setup builddir
+  Set up the build directory for the first time.
+- Specify compiler: CC=clang meson setup builddir
+  Use Clang as the compiler for the project.
+- Debug build: meson setup builddir --buildtype=debug
+  Configure the project for a debug build.
+
+Building the Project:
+- Compile the project: ninja -C builddir
+  Build the project using Ninja.
+
+Debugging with GDB:
+- Debugging: gdb builddir/memc
+  Debug the project's main executable with GDB.
+
+Cleaning the Build:
+- Clean build artifacts: ninja -C builddir clean
+  Clean up all build artifacts to start a fresh build.
+
+Running Tests:
+- Execute unit tests: meson test -C builddir
+  Run tests defined in the meson.build file.
